@@ -1,0 +1,7 @@
+{
+    "name": "mysql",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "mysql",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace/cached"
+  }
