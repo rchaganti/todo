@@ -4,7 +4,7 @@
     "features": {
         "ghcr.io/devcontainers/features/go:1": {}
     },
-    "service": "sms",
+    "service": "todo",
     "shutdownAction": "stopCompose",
     "workspaceFolder": "/workspace/src",
     "remoteUser": "vscode",

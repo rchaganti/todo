@@ -1,0 +1,25 @@
+version: '3'
+services:
+  todo:
+    image: mcr.microsoft.com/devcontainers/base:jammy    
+    container_name: todo  
+    restart: unless-stopped
+    volumes:    
+      - .:/workspace:cached
+    command: sleep infinity
+    networks:
+      - servicenet
+    links:
+      - "redis:redis"
+
+  redis:
+    image: redis:latest
+    container_name: redis    
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - servicenet
+
+networks:
+  servicenet:
